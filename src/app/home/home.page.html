@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <button type="button" (click)="getDataTickers()"
+      class="button-blue">Refersh</button>
+
+    @for (item of dataTickers; track $index) {
+    <div
+      class="wrapper">
+      <div class="data-center">
+        <p class="heading">Rank</p>
+        <p class="title">{{ item.rank }}</p>
+      </div>
+      <div class="data">
+        <p class="heading">{{ item.symbol }}</p>
+        <p class="title">{{ item.name }}</p>
+      </div>
+      <div class="data">
+        <p class="heading">USD</p>
+        <p class="title">{{ item.price_usd }}</p>
+      </div>
+    </div>
+    }
+
   </div>
 </ion-content>

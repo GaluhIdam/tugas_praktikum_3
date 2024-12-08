@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://api.coinlore.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

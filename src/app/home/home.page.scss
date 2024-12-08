@@ -4,8 +4,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100svh;
+  overflow-y: auto;
 }
 
 #container strong {
@@ -24,4 +24,39 @@
 
 #container a {
   text-decoration: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 30px;
+}
+
+.button-blue {
+  background-color: aqua;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.data {
+  text-align: start;
+  .heading {
+    font-size: small;
+  }
+  .title {
+    font-weight: 600;
+  }
+
+  &-center {
+    text-align: center;
+    .heading {
+      font-size: small;
+    }
+    .title {
+      font-weight: 600;
+    }
+  }
 }
